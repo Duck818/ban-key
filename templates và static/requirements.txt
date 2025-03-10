@@ -1,3 +1,0 @@
-gunicorn
-flask  # N?u b?n dùng Flask
-django  # N?u b?n dùng Django
