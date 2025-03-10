@@ -1,3 +1,0 @@
-﻿gunicorn
-flask  # Nếu bạn dùng Flask
-django  # Nếu bạn dùng Django
