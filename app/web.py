@@ -1,4 +1,4 @@
-﻿from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify
 import sqlite3
 
 app = Flask(__name__)
@@ -7,6 +7,11 @@ app = Flask(__name__)
 def get_db():
     conn = sqlite3.connect("users.db")
     return conn, conn.cursor()
+
+# Trang chủ (sửa lỗi 404)
+@app.route("/")
+def home():
+    return "Trang web bán key đã hoạt động!"
 
 # API kiểm tra & cộng coin
 @app.route("/api/check-payment", methods=["POST"])
@@ -34,6 +39,3 @@ def check_payment():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
-
-# Định nghĩa app
-app = Flask(__name__)
